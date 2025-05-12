@@ -3,7 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Title
-st.title("CT Image Quality Optimizer")
+st.title("CT Image Quality Optimizer (V1.0)")
+st.markdown("""
+This app displays actual and optional ML-predicted **Signal-to-Noise Ratio (SNR)** and **Contrast-to-Noise Ratio (CNR)** values 
+from abdominal CT data based on **abdominal volume** and **kVp**.
+""")
 
 # Load your data
 df = pd.read_csv("data.csv")
