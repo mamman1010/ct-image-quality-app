@@ -66,3 +66,6 @@ ax.set_title(f"SNR & CNR vs. kVp for ROI: {roi.title()}")
 ax.legend()
 ax.grid(True)
 st.pyplot(fig)
+st.markdown("---")
+st.caption("Developed by Mamman • Powered by Streamlit & Machine Learning")
+
