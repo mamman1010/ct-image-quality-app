@@ -27,7 +27,7 @@ kVp = st.selectbox("Select tube voltage (kVp):", options=[80, 120])
 # Abdominal volume slider based on data range
 min_vol = int(df['ab_volume'].min())
 max_vol = int(df['ab_volume'].max())
-ab_volume = st.slider("Select abdominal volume: e.g 10783 〖cm〗^3", min_value=min_vol, max_value=max_vol, value=min_vol)
+ab_volume = st.slider("Select abdominal volume: e.g 10783 cm^3", min_value=min_vol, max_value=max_vol, value=min_vol)
 ab_volume_int = int(ab_volume)
 
 # Filter actual values
