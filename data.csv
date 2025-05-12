@@ -1,4 +1,4 @@
-ab_volume,kVp,roi,SNR,CNR
+ab_volume,kVp,roi,snr,cnr
 7529.47,80,LIVER,9.18,5.22
 9502.72,120,LIVER,6.25,2.22
 9010.83,120,LIVER,9.32,6.01
