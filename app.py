@@ -21,19 +21,19 @@ from abdominal CT data based on **abdominal volume** and **kVp**.
 # Sidebar toggle for ML model
 use_ml = st.sidebar.checkbox("Use ML Model for Prediction")
 
+# Tube voltage selection
+kVp = st.selectbox("Select tube voltage (kVp):", options=[80, 120])
+
 # Abdominal volume slider based on data range
 min_vol = int(df['ab_volume'].min())
 max_vol = int(df['ab_volume'].max())
 ab_volume = st.slider("Select abdominal volume:", min_value=min_vol, max_value=max_vol, value=min_vol)
 ab_volume_int = int(ab_volume)
 
-# Tube voltage selection
-kVp = st.selectbox("Select tube voltage (kVp):", options=[80, 120])
-
 # Filter actual value for exact match
 exact_filtered = df[(df['ab_volume'] == ab_volume_int) & (df['kVp'] == kVp)]
 
-# Filter nearby values for plotting (±50 cm³)
+# Filter nearby values for plotting (±200 cm³)
 range_filtered = df[
     (df['ab_volume'] >= ab_volume_int - 200) &
     (df['ab_volume'] <= ab_volume_int + 200) &
