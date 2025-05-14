@@ -77,7 +77,7 @@ if use_ml and pred_snr is not None and pred_cnr is not None:
     ax.scatter(ab_volume_int, pred_cnr, color='orange', marker='*', s=150, label='Predicted CNR')
 
 # Reference vertical line for current slider value
-ax.axvline(ab_volume_int, color='gray', linestyle='--', label='Selected Volume')
+ax.axvline(ab_volume_int, color='black', linestyle='--', label='Selected Volume')
 
 ax.set_xlabel("Abdominal Volume (cm³)")
 ax.set_ylabel("SNR / CNR")
