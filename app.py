@@ -28,7 +28,7 @@ if input_method == "Abdominal Volume":
     ab_volume_int = int(round(ab_volume))
     filtered = df[(df['ab_volume'] == ab_volume_int) & (df['kVp'] == kVp)]
 elif input_method == "Abdominal Circumference":
-    ab_circ = st.number_input("📏 Enter abdominal circumference (rounded, in mm):", min_value=0, step=1, help="Measured from a representative axial slice using the 3D Slicer ruler or segment statistics")
+    ab_circ = st.number_input("📏 Enter abdominal circumference (rounded, in cm):", min_value=0, step=1, help="Measured from a representative axial slice using the 3D Slicer ruler or segment statistics")
     ab_circ_int = int(round(ab_circ))
     filtered = df[(df['ab_circumference'] == ab_circ_int) & (df['kVp'] == kVp)]
 
