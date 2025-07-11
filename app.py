@@ -87,5 +87,5 @@ ax.spines['right'].set_visible(False)
 
 st.pyplot(fig)
 
-st.markdown("**Disclaimer**: This app provides experimental kVp predictions for abdominal CT scans. Consult a radiologist for clinical decisions.")
+st.markdown("**Disclaimer**: This app provides SNR & CNR predictions for abdominal CT scans. Consult a radiologist for clinical decisions.")
 st.caption("👨‍⚕️ Developed by Mamman • Powered by Streamlit & Machine Learning")
