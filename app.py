@@ -4,6 +4,13 @@ import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
 
+st.markdown("""
+    <style>
+    .main {background-color: #f5f5f5;}
+    .stButton>button {background-color: #4CAF50; color: white;}
+    </style>
+""", unsafe_allow_html=True)
+
 # Load dataset
 df = pd.read_csv("data.csv")
 df.columns = df.columns.str.strip()
@@ -80,5 +87,5 @@ ax.spines['right'].set_visible(False)
 
 st.pyplot(fig)
 
-st.markdown("---")
+st.markdown("**Disclaimer**: This app provides experimental kVp predictions for abdominal CT scans. Consult a radiologist for clinical decisions.")
 st.caption("👨‍⚕️ Developed by Mamman • Powered by Streamlit & Machine Learning")
