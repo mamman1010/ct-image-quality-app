@@ -10,11 +10,11 @@ df = pd.read_csv("data.csv")
 df.columns = df.columns.str.strip()  # Clean column names
 
 # Round volume and circumference to 2 decimal places
-df["ab_volume"] = df["ab_volume"].round().astype(int)
+df["volume"] = df["volume"].round().astype(int)
 df["ab_circumference"] = df["ab_circumference"].round().astype(int)
 
 # --- Volume-based model training ---
-X_volume = df[["ab_volume", "kVp"]]
+X_volume = df[["volume", "kVp"]]
 y_snr = df["snr"]
 y_cnr = df["cnr"]
 
@@ -58,3 +58,4 @@ joblib.dump(snr_model_circ, "snr_model_circ.pkl")
 joblib.dump(cnr_model_circ, "cnr_model_circ.pkl")
 
 print("All models trained and saved successfully.")
+
